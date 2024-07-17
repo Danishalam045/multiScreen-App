@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:seventh_project/categories.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:seventh_project/categories.dart';
-// import 'package:seventh_project/data/dummy_data.dart';
-// import 'package:seventh_project/screen/meals.dart';
 
 final theme = ThemeData(
   useMaterial3: true,

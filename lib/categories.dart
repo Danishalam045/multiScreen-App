@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:seventh_project/data/dummy_data.dart';
 import 'package:seventh_project/models/category.dart';
-// import 'package:seventh_project/models/meal.dart';
 import 'package:seventh_project/screen/meals.dart';
 import 'package:seventh_project/widgets/category_grid_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
-  const CategoriesScreen({super.key});
+  const CategoriesScreen({
+    super.key,
+  });
 
   void _selectCategory(BuildContext context, Category category) {
     final getData = dummyMeals
@@ -15,7 +16,11 @@ class CategoriesScreen extends StatelessWidget {
 
     Navigator.of(context).push(
       MaterialPageRoute(
-          builder: (ctx) => MealScreen(meals: getData, title: category.title)),
+        builder: (ctx) => MealScreen(
+          meals: getData,
+          title: category.title,
+        ),
+      ),
     );
   }
 
