@@ -7,10 +7,10 @@ class MealScreen extends StatelessWidget {
   const MealScreen({
     super.key,
     required this.meals,
-    required this.title,
+    this.title,
   });
 
-  final String title;
+  final String? title;
   final List<Meal> meals;
 
   void selectMeal(BuildContext context,Meal meal) {
@@ -59,9 +59,14 @@ class MealScreen extends StatelessWidget {
         ),
       );
     }
+
+    if(title==null)
+    {
+      return content;
+    }
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(title!),
       ),
       body: content,
     );
